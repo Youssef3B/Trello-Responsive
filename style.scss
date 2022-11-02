@@ -1,0 +1,511 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,700;1,600&family=Roboto+Flex:opsz,wght@8..144,500;8..144,600&display=swap');
+@import 'variables';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+h1,h2,h3,h4,h5,h6,p{
+    color: $color-black;
+}
+nav{
+    position:fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;    padding: 20px 10px;
+    width: 100%;
+    height: 80px;
+    z-index: 2;
+    img{
+        max-width: 140px;
+    }
+    button{
+        @extend %btn
+    }
+    .menu{
+        display: none;
+       }
+    .btn2{
+        @extend %btn;
+        background-color: transparent;
+        color: $color-primary;
+        &:hover{
+            color: darken($color-primary,10%);
+            background-color: transparent;
+        }
+    }
+    @media (max-width: 800px){
+        nav{
+            width: 100%;
+        }
+        .right_nav{
+            display: none;
+           
+        }
+        .menu{
+            display: block;
+            color: black;
+            cursor: pointer;
+            scale: 1.8;
+            color: $color-primary;
+        }
+    }
+}
+main{
+     position: relative;
+     top: 100px;
+     width: 100%;
+    .hero_section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        padding-left: 5%;
+        padding-right: 1%;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(234, 230, 255, 1) 50%, rgba(255, 255, 255, 1) 100%);
+        img{
+            max-width: 700px;
+        }
+        h1{
+            font-size: 50px;
+            font-weight: 600;
+            color: $color-black;
+            margin-bottom: 10px;
+        }
+        p{
+            font-size: 20px;
+            line-height: 2;
+            width: 100%;
+            margin-bottom: 60px;
+        }
+        .hero_section_email{
+            display: flex;
+            input{
+               @extend %input;
+            }
+            button{
+                @extend %btn;
+            }
+        }
+      
+    }
+    @media (max-width:1380px){
+        .hero_section{
+            img{
+                max-width: 400px;   
+            }
+            h1{
+                font-size: 40px;
+                display: block;
+            }
+            p{
+                font-size: 20px;
+            }
+            .hero_section_email{
+                scale: 0.8;
+                display: flex;
+                justify-content: flex-start;
+                width: 100%;
+            } 
+        }
+        .ebay{
+            flex-direction: column;
+        }
+        .equipe{
+            width: 100% !important;
+        }
+    }
+    @media (max-width:1100px){
+        .flex{
+            flex-direction: column !important;
+            img{
+                width: 100% !important;
+                
+            }
+        }
+        .slide{
+            width: 50% !important;
+        }
+        .products{
+            flex-direction: column !important;
+           h4{
+            font-size: 20px !important;
+            margin-top: 10px !important;
+           }
+           p{
+            font-size: 16px !important;
+           }
+            img{
+                width: 20% !important;
+            }
+            button{
+                width: 220px;
+            }
+        }
+        .footer{
+           .footer_card{
+            width: 100%;
+            h4{
+                font-size: 18px;
+            }
+            .email{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                input{
+                    margin: auto;
+                }
+                button{
+                    width: 160px;
+                    display: block;
+                    margin: auto;
+                    margin-top: 10px;
+                }
+            }
+           }
+           ul{
+            display: flex;
+            flex-direction: column;
+         }
+        }
+    }
+    @media (max-width:800px){
+        .hero_section{
+            flex-direction: column;
+            width: 100%;     
+        } 
+        .slide{
+            width: 50% !important;
+        }
+        .companys{
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .equipe{
+            width: 100% !important;
+            text-align: center;
+            margin: auto;
+            h2{
+                font-size: 20px !important;
+                color: red;
+                width: 100%;
+            }    
+        } 
+        .ebay{
+            h3{
+                font-size: 22px!important;
+                margin-bottom: 10px !important;
+            }
+        }
+        .ebay img{
+            width: 80% !important;
+            
+        }
+        .under_ebay{
+            flex-direction: column;
+            text-align: center;
+        }
+        .footer{
+            .footer_card{
+             width: 100%;
+             h4{
+                 font-size: 15px;
+             }
+             .email{
+                 display: flex;
+                 flex-direction: column;
+                 text-align: center;
+                
+                 input{
+                     margin: auto;
+                     width: 200px;
+                 }
+                 button{
+                     width: 120px;
+                     display: block;
+                     margin: auto;
+                     margin-top: 10px;
+                 }
+             }
+            
+            }
+            ul{
+                display: flex;
+                flex-direction: column;
+             }
+         }
+        
+    }
+    .about{
+        width: 80%;
+        margin: auto;
+        margin-top: 80px;
+       .about_container{
+        text-align: center;
+        h2{
+            font-size: 38px;
+            color: $color-black;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        h4{
+            max-width: 79%;
+            text-align: center;
+            margin: auto;
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 12px;
+               }
+        button{
+            @extend %btn2;
+            margin-bottom: 10px;
+        }
+        img{
+            max-width: 100%;
+        }
+    }
+    p{
+        text-align: center;
+        font-size: 20px;
+    }
+    .companys{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+        padding-left: 30%;
+        padding-right: 30%;
+    }
+   
+} 
+
+.details{
+    margin-top: 70px;
+    padding-left: 10%;
+    padding-right: 10%;
+    
+    .equipe{
+        width: 44%;
+        margin-bottom: 80px;
+        h2{
+            font-size: 32px;
+            color: $color-black;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        p{
+            font-size: 20px;
+            line-height: 1.8;
+        }
+    }
+    .flex{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 80px;
+        .left_flex{
+            img{
+                width: 600px;
+            }
+        }
+        .right_flex{
+            
+            h4{
+             font-size: 16px;
+             color: $color-black;
+             font-weight: 600;
+             margin-bottom: 10px;  
+            }
+            h2{
+                font-size: 34px;     
+            }
+            p{
+                font-size: 20px;
+                line-height: 2;
+                margin-bottom: 10px;
+            }
+            a{
+                text-decoration: none;
+                font-size: 24px;
+                color: $color-black;
+                font-weight: 500;
+                margin-left: 30px;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }   
+        }    
+    }
+    .products{
+        display: flex;
+        border-top: 2px solid $color-black;
+        border-bottom: 2px solid $color-black;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        padding: 20px 30px;  
+        .products_items{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .products_items_right{
+                margin-left: 40px;
+                h4{
+                    font-size: 24px;
+                    margin-bottom: 10px;
+                }
+                p{
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                }
+                button{
+                    @extend %btn2;
+                    margin-top: 10px;
+                   
+                }
+            }
+        }
+    }
+}
+.quote{
+    background-color: $color-ebay;
+    margin-top: 100px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 8%;
+    padding-bottom: 50px;
+    .ebay{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        img{
+            width: 500px;
+        }
+        h3{
+            font-size: 35px;
+            line-height: 2;
+            font-weight: 600;
+            margin-top: 80px;
+            margin-left: 30px;
+        }    
+    } 
+    .under_ebay{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 120px;
+        border-bottom: 4px solid black;
+        h5{
+            font-size: 20px;
+            font-weight: 700;
+        }
+        p{
+            font-size: 18px;
+            font-weight: 800;
+        }
+    }
+    .slide{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 12%;
+        margin-top: 20px;
+        .dot{
+            width: 12px;
+            height: 12px;
+            background-color: $color-black;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        i{
+            background-color: $color-black;
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    }
+}
+.footer{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    .footer_card{
+        background-image: url(images/Capture.JPG);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 260px;
+        padding: 40px;
+    }
+        h4{
+            font-size: 30px;
+            text-align: center;
+            color: white;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        .email{
+            text-align: center;
+            input{
+                @extend %input;
+                width: 260px;
+                height: 40px;  
+            }
+            button{
+                @extend %btn;
+                background-color: #0dcaf0;
+                &:hover{
+                    background-color: lighten(#0dcaf0,10%);
+                }
+            }
+        }
+        p{
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+        .apps{
+        
+            margin-top: 20px;
+            margin-bottom: 100px;
+            text-align: center;
+            img{
+                width: 160px;
+                display: inline;  
+            }
+        }  
+        select{
+            display: block;
+            margin: auto;
+            width: 140px;
+            height: 40px;
+            border: 1px solid rgba(0, 0, 0, 0.224);
+            color: gray;
+        }  
+        ul{
+            margin-top: 40px;
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            a{
+                color: $color-black;
+                padding: 20px;
+            }
+        }
+        img{
+            display: block;
+            margin: auto;
+            width: 200px;
+        }
+        #copyright{
+            font-size: 18px;
+        }
+}
+ }
+
+

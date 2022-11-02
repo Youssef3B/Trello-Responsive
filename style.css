@@ -1,0 +1,523 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,700;1,600&family=Roboto+Flex:opsz,wght@8..144,500;8..144,600&display=swap");
+main .footer .email button, main .hero_section .hero_section_email button, nav .btn2, nav button {
+  background-color: #0d6efd;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.2s ease-in-out;
+}
+main .footer .email button:hover, main .hero_section .hero_section_email button:hover, nav .btn2:hover, nav button:hover {
+  background-color: #0257d5;
+}
+
+main .footer .email input, main .hero_section .hero_section_email input {
+  width: 50%;
+  height: 70px;
+  margin-right: 20px;
+  border: none;
+  border-radius: 8px;
+  padding-left: 20px;
+}
+main .footer .email input::-moz-placeholder, main .hero_section .hero_section_email input::-moz-placeholder {
+  font-size: 22px;
+}
+main .footer .email input:-ms-input-placeholder, main .hero_section .hero_section_email input:-ms-input-placeholder {
+  font-size: 22px;
+}
+main .footer .email input::placeholder, main .hero_section .hero_section_email input::placeholder {
+  font-size: 22px;
+}
+main .footer .email input:focus, main .hero_section .hero_section_email input:focus {
+  outline: #0d6efd;
+  border: 4px solid rgba(13, 109, 253, 0.2745098039);
+}
+
+main .details .products .products_items .products_items_right button, main .about .about_container button {
+  background-color: transparent;
+  color: #0d6efd;
+  padding: 10px 20px;
+  border: 1px solid #0d6efd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.2s ease-in-out;
+}
+main .details .products .products_items .products_items_right button:hover, main .about .about_container button:hover {
+  background-color: #0d6efd;
+  color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  color: #212529;
+}
+
+nav {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 20px 10px;
+  width: 100%;
+  height: 80px;
+  z-index: 2;
+}
+nav img {
+  max-width: 140px;
+}
+nav .menu {
+  display: none;
+}
+nav .btn2 {
+  background-color: transparent;
+  color: #0d6efd;
+}
+nav .btn2:hover {
+  color: #0257d5;
+  background-color: transparent;
+}
+@media (max-width: 800px) {
+  nav nav {
+    width: 100%;
+  }
+  nav .right_nav {
+    display: none;
+  }
+  nav .menu {
+    display: block;
+    color: black;
+    cursor: pointer;
+    scale: 1.8;
+    color: #0d6efd;
+  }
+}
+
+main {
+  position: relative;
+  top: 100px;
+  width: 100%;
+}
+main .hero_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5%;
+  padding-right: 1%;
+  background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(234, 230, 255) 50%, rgb(255, 255, 255) 100%);
+}
+main .hero_section img {
+  max-width: 700px;
+}
+main .hero_section h1 {
+  font-size: 50px;
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 10px;
+}
+main .hero_section p {
+  font-size: 20px;
+  line-height: 2;
+  width: 100%;
+  margin-bottom: 60px;
+}
+main .hero_section .hero_section_email {
+  display: flex;
+}
+@media (max-width: 1380px) {
+  main .hero_section img {
+    max-width: 400px;
+  }
+  main .hero_section h1 {
+    font-size: 40px;
+    display: block;
+  }
+  main .hero_section p {
+    font-size: 20px;
+  }
+  main .hero_section .hero_section_email {
+    scale: 0.8;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  main .ebay {
+    flex-direction: column;
+  }
+  main .equipe {
+    width: 100% !important;
+  }
+}
+@media (max-width: 1100px) {
+  main .flex {
+    flex-direction: column !important;
+  }
+  main .flex img {
+    width: 100% !important;
+  }
+  main .slide {
+    width: 50% !important;
+  }
+  main .products {
+    flex-direction: column !important;
+  }
+  main .products h4 {
+    font-size: 20px !important;
+    margin-top: 10px !important;
+  }
+  main .products p {
+    font-size: 16px !important;
+  }
+  main .products img {
+    width: 20% !important;
+  }
+  main .products button {
+    width: 220px;
+  }
+  main .footer .footer_card {
+    width: 100%;
+  }
+  main .footer .footer_card h4 {
+    font-size: 18px;
+  }
+  main .footer .footer_card .email {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  main .footer .footer_card .email input {
+    margin: auto;
+  }
+  main .footer .footer_card .email button {
+    width: 160px;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+  }
+  main .footer ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 800px) {
+  main .hero_section {
+    flex-direction: column;
+    width: 100%;
+  }
+  main .slide {
+    width: 50% !important;
+  }
+  main .companys {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  main .equipe {
+    width: 100% !important;
+    text-align: center;
+    margin: auto;
+  }
+  main .equipe h2 {
+    font-size: 20px !important;
+    color: red;
+    width: 100%;
+  }
+  main .ebay h3 {
+    font-size: 22px !important;
+    margin-bottom: 10px !important;
+  }
+  main .ebay img {
+    width: 80% !important;
+  }
+  main .under_ebay {
+    flex-direction: column;
+    text-align: center;
+  }
+  main .footer .footer_card {
+    width: 100%;
+  }
+  main .footer .footer_card h4 {
+    font-size: 15px;
+  }
+  main .footer .footer_card .email {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  main .footer .footer_card .email input {
+    margin: auto;
+    width: 200px;
+  }
+  main .footer .footer_card .email button {
+    width: 120px;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+  }
+  main .footer ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
+main .about {
+  width: 80%;
+  margin: auto;
+  margin-top: 80px;
+}
+main .about .about_container {
+  text-align: center;
+}
+main .about .about_container h2 {
+  font-size: 38px;
+  color: #212529;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+main .about .about_container h4 {
+  max-width: 79%;
+  text-align: center;
+  margin: auto;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+main .about .about_container button {
+  margin-bottom: 10px;
+}
+main .about .about_container img {
+  max-width: 100%;
+}
+main .about p {
+  text-align: center;
+  font-size: 20px;
+}
+main .about .companys {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding-left: 30%;
+  padding-right: 30%;
+}
+main .details {
+  margin-top: 70px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+main .details .equipe {
+  width: 44%;
+  margin-bottom: 80px;
+}
+main .details .equipe h2 {
+  font-size: 32px;
+  color: #212529;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+main .details .equipe p {
+  font-size: 20px;
+  line-height: 1.8;
+}
+main .details .flex {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+main .details .flex .left_flex img {
+  width: 600px;
+}
+main .details .flex .right_flex h4 {
+  font-size: 16px;
+  color: #212529;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+main .details .flex .right_flex h2 {
+  font-size: 34px;
+}
+main .details .flex .right_flex p {
+  font-size: 20px;
+  line-height: 2;
+  margin-bottom: 10px;
+}
+main .details .flex .right_flex a {
+  text-decoration: none;
+  font-size: 24px;
+  color: #212529;
+  font-weight: 500;
+  margin-left: 30px;
+}
+main .details .flex .right_flex a:hover {
+  text-decoration: underline;
+}
+main .details .products {
+  display: flex;
+  border-top: 2px solid #212529;
+  border-bottom: 2px solid #212529;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding: 20px 30px;
+}
+main .details .products .products_items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .details .products .products_items .products_items_right {
+  margin-left: 40px;
+}
+main .details .products .products_items .products_items_right h4 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+main .details .products .products_items .products_items_right p {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+main .details .products .products_items .products_items_right button {
+  margin-top: 10px;
+}
+main .quote {
+  background-color: #E6FCFF;
+  margin-top: 100px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 8%;
+  padding-bottom: 50px;
+}
+main .quote .ebay {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .quote .ebay img {
+  width: 500px;
+}
+main .quote .ebay h3 {
+  font-size: 35px;
+  line-height: 2;
+  font-weight: 600;
+  margin-top: 80px;
+  margin-left: 30px;
+}
+main .quote .under_ebay {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 120px;
+  border-bottom: 4px solid black;
+}
+main .quote .under_ebay h5 {
+  font-size: 20px;
+  font-weight: 700;
+}
+main .quote .under_ebay p {
+  font-size: 18px;
+  font-weight: 800;
+}
+main .quote .slide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 12%;
+  margin-top: 20px;
+}
+main .quote .slide .dot {
+  width: 12px;
+  height: 12px;
+  background-color: #212529;
+  border-radius: 50%;
+  cursor: pointer;
+}
+main .quote .slide i {
+  background-color: #212529;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+main .footer {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 4%;
+  padding-bottom: 4%;
+}
+main .footer .footer_card {
+  background-image: url(images/Capture.JPG);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 260px;
+  padding: 40px;
+}
+main .footer h4 {
+  font-size: 30px;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+main .footer .email {
+  text-align: center;
+}
+main .footer .email input {
+  width: 260px;
+  height: 40px;
+}
+main .footer .email button {
+  background-color: #0dcaf0;
+}
+main .footer .email button:hover {
+  background-color: #3cd5f4;
+}
+main .footer p {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+main .footer .apps {
+  margin-top: 20px;
+  margin-bottom: 100px;
+  text-align: center;
+}
+main .footer .apps img {
+  width: 160px;
+  display: inline;
+}
+main .footer select {
+  display: block;
+  margin: auto;
+  width: 140px;
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.224);
+  color: gray;
+}
+main .footer ul {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+main .footer ul a {
+  color: #212529;
+  padding: 20px;
+}
+main .footer img {
+  display: block;
+  margin: auto;
+  width: 200px;
+}
+main .footer #copyright {
+  font-size: 18px;
+}/*# sourceMappingURL=style.css.map */
